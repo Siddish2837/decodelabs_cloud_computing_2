@@ -1,0 +1,85 @@
+In Project 2:
+
+You create your own virtual server.
+You manage the operating system.
+You install software manually.
+You become the system administrator.
+
+The PDF describes this as moving from managed services to full system control.
+
+
+STEP 1: open aws console and search for EC2 in search bar 
+
+STEP 2 : click instance
+	launch instance
+		name and tag
+		Select Operating System ...here we use AMI(Amazon Machine Image)
+		instance type.. here we choose t3.micro
+		create a key pair.... which is most important for linking server ...choose type as RSA and file format If using Windows + PuTTY then Choose:  .ppk    and If using Windows Terminal / PowerShell / Git Bash (recommended), macOS, or Linux then Choose:  .pem(Do NOT delete this file.
+⚠️ Do NOT upload it to GitHub.
+⚠️ Keep it in a safe folder.)
+		in configure network settings add the configurations like ssh,http,https etc required for the project with appropriate protocols(TCP for modern) and give correct sources 
+		and click launch instance
+
+STEP 3: view instance ..check for instance state :running Instance ,Status Check: Initializing  and Public IPv4 Address: Present
+
+STEP 4: HANDSHAKE ...connection to client and server.. which can be done using terminal or putty
+	after downloading putty from website ... u get putty app and puttygen app
+
+STEP 5: In puttygen app .. load your .pem file which u downloaded before and click save private key ..so it downloads .ppk file
+
+STEP 6: open putty app . 
+	and enter Host Name (or IP address) in box
+	attach .ppk file by following process 
+		Connection
+   			→ SSH
+    				→ Auth
+       					  → Credentials
+		in credentials u find Private key file for authentication.. browse and select .ppk file
+
+STEP 7: Open Session and click open and accept then a terminal appears.
+
+STEP 8: type "sudo dnf update -y" to refresh the page and updated the packages on your Amazon Linux server. and u can see again "[ec2-user@ip-172-31-44-11 ~]$"
+
+STEP 9: download Nginx by typing "sudo dnf install nginx -y" in the terminal .. then u can see "completed!" and "[ec2-user@ip-172-31-44-11 ~]$" in next line
+
+STEP 10: Next is deploying payload ... start the nginx using this prompt "sudo systemctl start nginx".. this command start the web server and this "[ec2-user@ip-172-31-44-11 ~]$" is seen
+
+STEP 11: enter "sudo nano /usr/share/nginx/html/index.html" to open nano and press ctrl+k to remove content line by line and then replace with your html code and press ctrl + O to save and then to exit enter ctrl+X
+
+STEP 12: to verify open the public ipv4 address we used in the this project
+
+
+
+
+We:
+
+1. Created a Virtual Machine
+
+(EC2 instance)
+
+2. Installed an Operating System
+
+(Amazon Linux)
+
+3. Configured Network Security
+
+(Security Groups)
+
+4. Created SSH Authentication
+
+(.pem → .ppk)
+
+5. Connected Remotely
+
+(PuTTY)
+
+6. Installed Software
+
+(Nginx)
+
+7. Modified Files Inside Linux
+
+(index.html)
+
+8. Served Web Content Through Port 80

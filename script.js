@@ -31,7 +31,7 @@ const workspaceData = {
 
     student: {
 
-        image: "images/student.png",
+        image: "images/student.jpg",
 
         title: "Student Workspace",
 
@@ -51,7 +51,7 @@ const workspaceData = {
 
     developer: {
 
-        image: "images/developer.png",
+        image: "images/developer.jpg",
 
         title: "Developer Workspace",
 
@@ -71,7 +71,7 @@ const workspaceData = {
 
     gamer: {
 
-        image: "images/gamer.png",
+        image: "images/gamer.jpg",
 
         title: "Gamer Workspace",
 
@@ -91,7 +91,7 @@ const workspaceData = {
 
     creator: {
 
-        image: "images/creator.png",
+        image: "images/creator.jpg",
 
         title: "Creator Workspace",
 
@@ -111,7 +111,7 @@ const workspaceData = {
 
     minimal: {
 
-        image: "images/minimal.png",
+        image: "images/minimal.jpg",
 
         title: "Minimal Workspace",
 
@@ -131,7 +131,7 @@ const workspaceData = {
 
     productivity: {
 
-        image: "images/productivity.png",
+        image: "images/productivity.jpg",
 
         title: "Productivity Workspace",
 
